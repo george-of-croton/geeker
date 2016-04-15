@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
-import profileModel from '../models/profiles.js'
-console.log(profileModel)
+var  profileModel = require('../models/profiles.js')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   profileModel.all()
     .then(function(data){
-      profileModel.listProfiles(data)
+      // profileModel.listProfiles(data)
       res.render('profiles')
     })
 

@@ -1,29 +1,24 @@
-import Knex from 'knex'
-import knexConfig from '../knexfile.js'
+'use strict'
+var Knex = require('knex')
+var knexConfig = require('../knexfile.js')
 
 var knex = Knex(knexConfig[process.env.NODE_ENV || 'development'])
 
 
-class Profile {
+var profile = {
 
-  static all() {
+ all: function()  {
    return knex.select().table('profiles')
-  }
+  },
 
-  static listProfiles(profiles) {
+  listProfiles: function(profile){
     profiles.forEach(function (profile) { console.log(profile.name) })
-  }
+  },
 
-  static searchUsers () {
-    return knex('users').where({
-      name: 'george'
-    }).select('id')
-  }
-
-  static closeDB(){
+  closeDB: function(){
     knex.destroy()
   }
 
 }
 
-export default Profile
+module.exports =  profile
