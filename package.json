@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "browserify models/profiles.js -o models/bundle.js -t [ babelify --presets [ es2015 react ] ]",
-    "start": "nodemon ./bin/www --exec babel-node --presets es2015"
+    "start": "node ./bin/www --exec babel-node --presets es2015"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
