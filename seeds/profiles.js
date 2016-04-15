@@ -11,6 +11,7 @@ exports.seed = function(knex, Promise) {
     knex('profiles').insert({name: 'ollie'}),
     knex('profiles').insert({name: 'vicken'}),
     knex('profiles').insert({name: 'lizzie'}),
-    knex('profiles').insert({name: 'heidi'})
+    knex('profiles').insert({name: 'maxine'}),
+
   );
 };
