@@ -82,11 +82,6 @@ var Profile = function () {
     value: function all() {
       return knex.select().table('profiles');
     }
-
-    // static logError (err) {
-    //   console.log('Dang, we exploded like a bomb: ', err)
-    // }
-
   }, {
     key: 'listProfiles',
     value: function listProfiles(profiles) {
