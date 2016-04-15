@@ -6,8 +6,8 @@ console.log(profileModel)
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   profileModel.all()
-    .then(profileModel.listProfiles(){
-      console.log(data)
+    .then(function(data){
+      profileModel.listProfiles(data)
       res.render('profiles')
     })
 
